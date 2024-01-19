@@ -38,4 +38,4 @@ The data contains demographic details, work-related metrics and attrition flag.
 * **YearsWithCurrManager** - Years with the current manager
 
 ## Acknowledgements
-https://www.ibm.com/communities/analytics/watson-analytics-blog/watson-analytics-use-case-for-hr-retaining-valuable-employees/
+<https://www.ibm.com/communities/analytics/watson-analytics-blog/watson-analytics-use-case-for-hr-retaining-valuable-employees/>
