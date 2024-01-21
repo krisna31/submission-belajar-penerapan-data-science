@@ -32,7 +32,7 @@ Setup environment:
 2. Buka terminal atau command prompt.
 3. Buat environment baru dengan perintah `conda create -n jaya-jaya-maju-dropout python=3.9`.
 4. Aktifkan environment dengan perintah `conda activate jaya-jaya-maju-dropout`.
-5. Install library yang dibutuhkan dengan perintah `pip install pandas matplotlib seaborn jupyter sqlalchemy psycopg2 scikit-learn==1.2.2 joblib==1.3.1 tensorflow`.
+5. Install library yang dibutuhkan dengan perintah `pip install pandas matplotlib seaborn jupyter sqlalchemy psycopg2 scikit-learn==1.2.2 joblib==1.3.1 tensorflow streamlit`.
 6. Buka Jupyter Notebook dengan perintah `jupyter-notebook .`.
 7. Siap mengerjakan proyek.
 
