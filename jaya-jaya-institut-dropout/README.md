@@ -45,11 +45,16 @@ Setup environment:
 
 ## Menjalankan Sistem Machine Learning
 
-Jelaskan cara menjalankan protoype sistem machine learning yang telah dibuat. Selain itu, sertakan juga link untuk mengakses prototype tersebut.
+### How to run the prototype
 
-```
+1. Pastikan sudah menginstall streamlit di komputer Anda.
+2. Buka terminal atau command prompt.
+3. Jalankan perintah `streamlit run app.py`.
+4. Enjoy!
 
-```
+### Online link to access the prototype
+
+[https://krisna31-submission-belaja-jaya-jaya-institut-dropoutapp-rcnaob.streamlit.app/](https://krisna31-submission-belaja-jaya-jaya-institut-dropoutapp-rcnaob.streamlit.app/)
 
 ## Conclusion
 

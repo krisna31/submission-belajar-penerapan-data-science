@@ -5,11 +5,18 @@ import joblib
 import tensorflow as tf
 import seaborn as sns
 import matplotlib.pyplot as plt
+import os
+
+# Get the absolute path to the directory containing the models
+current_directory = os.path.dirname(os.path.abspath(__file__))
+model_directory = os.path.join(current_directory, "model")
 
 # create the preprocess function
 def preprocessData(user_input):
     # laod all the scaler models
-    scalers = {feature: joblib.load(f"model/scaler_{feature}.joblib") for feature in feature_column}
+    # scalers = {feature: joblib.load(f"model/scaler_{feature}.joblib") for feature in feature_column}
+    # Load the saved models and scalers
+    scalers = {feature: joblib.load(os.path.join(model_directory, f"scaler_{feature}.joblib")) for feature in feature_column}
     
     # Convert to (1 for 'Yes', 0 for 'No')
     for feature in ['Tuition_fees_up_to_date', 'Scholarship_holder', 'Debtor']:
@@ -99,10 +106,14 @@ if st.sidebar.button("Predict"):
     st.write(user_input_df)
 
     # Load the saved models and scalers
-    lr_model = joblib.load("model/y_pred_lr.joblib")
-    rf_model = joblib.load("model/model_rf.joblib")
-    adaboost_model = joblib.load("model/model_adaboost.joblib")
-    nn_model = tf.keras.models.load_model('model/neural_network_model.h5')
+    # lr_model = joblib.load("model/y_pred_lr.joblib")
+    # rf_model = joblib.load("model/model_rf.joblib")
+    # adaboost_model = joblib.load("model/model_adaboost.joblib")
+    # nn_model = tf.keras.models.load_model('model/neural_network_model.h5')
+    lr_model = joblib.load(os.path.join(model_directory, "y_pred_lr.joblib"))
+    rf_model = joblib.load(os.path.join(model_directory, "model_rf.joblib"))
+    adaboost_model = joblib.load(os.path.join(model_directory, "model_adaboost.joblib"))
+    nn_model = tf.keras.models.load_model(os.path.join(model_directory, "neural_network_model.h5"))
 
     # Predict the graduation
     lr_prediction = predict(lr_model, user_input_df)
